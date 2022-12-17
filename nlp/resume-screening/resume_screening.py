@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 ## Importing the dataset
-dataset = pd.read_csv('UpdatedResumeDataSet.csv', encoding='utf-8')
+dataset = pd.read_csv('../data/resume-screening/UpdatedResumeDataSet.csv', encoding='utf-8')
 
 ## Show necessary informations
 print('Displaying the distinct categories of resume:')
@@ -52,8 +52,6 @@ from nltk.corpus import stopwords
 import string
 from wordcloud import WordCloud
 
-nltk.download('stopwords')
-nltk.download('punkt')
 set_of_stopwords = set(stopwords.words('english')+['``',"''"])
 total_words = []
 sentences = dataset['Resume'].values

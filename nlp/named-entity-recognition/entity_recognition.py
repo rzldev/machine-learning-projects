@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 ## Importing the dataset
-dataset = pd.read_csv('ner_dataset.csv', encoding='unicode_escape')
+dataset = pd.read_csv('../data/named-entity-recognition/ner_dataset.csv', encoding='unicode_escape')
 print(dataset.head())
 
 ## Data preprocessing

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 ## Importing the dataset
-dataset = pd.read_csv('data/Train.csv')
+dataset = pd.read_csv('../data/sentiment-analysis/Train.csv')
 print(dataset.head())
 
 ## Visualize the distribution of the data
@@ -43,11 +43,9 @@ def tokenizer_porter(text):
     return [porter.stem(word) for word in text.split() if word != ' ']
 
 ## Creating the WordCloud
-import nltk
 from nltk.corpus import stopwords
 from wordcloud import WordCloud
 
-nltk.download('stopwords')
 stopwords = stopwords.words('english')
 
 positive = dataset[dataset['label'] == 1]['text']
