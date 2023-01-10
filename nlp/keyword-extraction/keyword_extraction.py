@@ -60,7 +60,7 @@ tfidf_transformer.fit(word_count_vector)
 ## Keyword extraction with TF-IDF vectorization
 
 # Get feature names
-feature_names = cv.get_feature_names()
+feature_names = cv.get_feature_names_out()
 
 def sort_coo(coo_matrix):
     tuples = zip(coo_matrix.col, coo_matrix.data)
